@@ -25,7 +25,8 @@ class DesktopNavBar extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isScrolled = ref.watch(scrolledProvider);
-    final navBarColor = isScrolled ? Colors.white : Colors.white;
+    final navBarColor =
+        isScrolled ? Colors.white : Color.fromARGB(255, 181, 250, 241);
 
     return Container(
       color: navBarColor,
@@ -35,7 +36,7 @@ class DesktopNavBar extends HookConsumerWidget {
           children: <Widget>[
             Image.asset(
               "assets/images/logo_riego.png",
-              height: 160.0,
+              height: 120.0,
             ),
             SizedBox(width: 10.0),
             Text(
@@ -81,7 +82,8 @@ class MobileNavBar extends HookConsumerWidget {
     final containerHeight = useState<double>(0.0);
     final isScrolled = ref.watch(scrolledProvider);
 
-    final navBarColor = isScrolled ? Colors.white : Colors.white;
+    final navBarColor =
+        isScrolled ? Colors.white : Color.fromARGB(255, 111, 245, 227);
     return Stack(
       children: [
         AnimatedContainer(

@@ -4,16 +4,18 @@ import 'package:riego_inteligente_web/src/widget/responsive_widget.dart';
 import 'dart:html';
 import 'dart:ui' as ui;
 
-const youtubeVideo = 'https://www.youtube.com/watch?v=pFG8yu7kdAs';
+final youtubeVideo = 'https://www.youtube.com/embed/pFG8yu7kdAs';
+//<iframe width="1349" height="480" src="https://www.youtube.com/embed/pFG8yu7kdAs" title="Cómo funciona el riego inteligente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+//https://www.youtube.com/watch?v=pFG8yu7kdAs&t=33s
 class FeaturesContent extends ResponsiveWidget {
   FeaturesContent({Key? key}) : super(key: key) {
-    // ui.platformViewRegistry.registerViewFactory(
-    //   'youtube-video',
-    //   (int viewId) => IFrameElement()
-    //     ..src = youtubeVideo
-    //     ..style.border = 'none',
-    // );
+    ui.platformViewRegistry.registerViewFactory(
+      'youtube-video',
+      (int viewId) => IFrameElement()
+        ..src = youtubeVideo
+        ..style.border = 'none',
+    );
   }
 
   @override
@@ -55,16 +57,28 @@ class FeaturesContentResponsive extends StatelessWidget {
             Container(
               width: 800,
               height: 450,
-              child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Image.asset('assets/images/aspersor.jpg')),
+              child:
+                  HtmlElementView(viewType: 'youtube-video', key: UniqueKey()),
             ),
-            // Container(
-            //   width: 800,
-            //   height: 450,
-            //   child:
-            //       HtmlElementView(viewType: 'youtube-video', key: UniqueKey()),
-            // )
+            Row(
+              children: [
+                Container(
+                  width: 300,
+                  height: 500,
+                  margin: EdgeInsets.fromLTRB(15, 0, 0, 0),
+                  child: Align(
+                      alignment: Alignment.bottomRight,
+                      child: Image.asset('assets/images/aspersor.jpg')),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(15, 0, 0, 0),
+                  child: Text(
+                    'Esta hecho con internet de las cosas como se muestra en la imagen',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),

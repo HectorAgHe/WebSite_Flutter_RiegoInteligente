@@ -40,7 +40,7 @@ class DesktopHomeContent extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 child: Image.asset('assets/images/telefono.jpg')),
           ),
-          SizedBox(width: 24),
+          SizedBox(width: 50),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

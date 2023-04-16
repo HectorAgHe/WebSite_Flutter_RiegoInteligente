@@ -41,7 +41,7 @@ class DesktopContactContent extends StatelessWidget {
             Container(
               width: width * .4,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -72,7 +72,7 @@ class DesktopContactContent extends StatelessWidget {
                     )),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
                         'IrrigationSystemsTlax@gmail.com',
@@ -91,7 +91,7 @@ class DesktopContactContent extends StatelessWidget {
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
                         '+52 241 208 60 06',
@@ -108,7 +108,7 @@ class DesktopContactContent extends StatelessWidget {
                             )),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -134,11 +134,12 @@ class MobileContactContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: ui.Color.fromARGB(255, 206, 143, 120),
+      color: ui.Color.fromARGB(255, 233, 227, 227),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "Informacion de Contacto",
@@ -146,7 +147,15 @@ class MobileContactContent extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Text(
-              'Segunda privada, Sancosme Xaloztoc, Tlaxcala',
+              'Universidad Tecnologica de Tlaxcala',
+              style: GoogleFonts.lato(
+                  textStyle: const TextStyle(
+                fontSize: 23,
+              )),
+            ),
+            SizedBox(height: 18),
+            Text(
+              'A El Carmen Xalpatlahuaya s/n, 90513 Huamantla, Tlaxcala.',
               style: GoogleFonts.almendra(
                   textStyle: const TextStyle(
                 fontSize: 20.0,
@@ -159,16 +168,50 @@ class MobileContactContent extends StatelessWidget {
                 fontSize: 20.0,
               )),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'IrrigationSystemsTlax@gmail.com',
+                  style: GoogleFonts.lato(fontSize: 18),
+                  textAlign: TextAlign.start,
+                ),
+                Container(
+                  child: Container(
+                      margin: EdgeInsets.only(top: 10, left: 10),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.email),
+                        color: ui.Color.fromARGB(153, 13, 15, 15),
+                      )),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  '+52 241 208 60 06',
+                  style: GoogleFonts.lato(fontSize: 18),
+                  textAlign: TextAlign.left,
+                ),
+                Container(
+                  child: Container(
+                      margin: EdgeInsets.only(top: 10, left: 10),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.phone),
+                        color: ui.Color.fromARGB(153, 13, 15, 15),
+                      )),
+                ),
+              ],
+            ),
             SizedBox(height: 24),
             Container(
-                width: 150.0,
-                child:
-                    Image.asset('assets/images/screenshots/screenshotmap.png')),
-            // Container(
-            //   height: 400,
-            //   width: 400,
-            //   child: HtmlElementView(viewType: 'google-maps', key: UniqueKey()),
-            // ),
+              height: 400,
+              width: 400,
+              child: HtmlElementView(viewType: 'google-maps', key: UniqueKey()),
+            ),
           ],
         ),
       ),

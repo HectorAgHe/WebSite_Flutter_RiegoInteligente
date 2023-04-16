@@ -33,7 +33,7 @@ class ScreenshotsContentResponsive extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
               child: Text(
-                'El sistema esta desarrollado por un equipo de ingenieros en software para brindar un producto de calidad, este sistema se desarrolla en secciones y de una forma agil y eficas garantizando la satisfaccion del cliente  |  Se muestran imagenes sobre el desarrollo del sistema  |.',
+                'El sistema esta desarrollado por un equipo de ingenieros en software para brindar un producto de calidad, este sistema se desarrolla en secciones y de una forma agil y eficas garantizando la satisfaccion del cliente  |  Se muestran imagenes de las principales vistas que tendra en la App |  |.',
                 style: GoogleFonts.almendra(
                     textStyle: const TextStyle(
                   fontSize: 20.0,
@@ -41,21 +41,25 @@ class ScreenshotsContentResponsive extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _Image(image: "assets/images/screenshots/screen3.jpg"),
-                  _Image(image: "assets/images/screenshots/screen2.png"),
-                  _Image(image: "assets/images/screenshots/screen3.jpg"),
-                  _Image(image: "assets/images/screenshots/screen2.png"),
-                  _Image(image: "assets/images/screenshots/screen3.jpg"),
-                  _Image(image: "assets/images/screenshots/screen2.png"),
-                  _Image(image: "assets/images/screenshots/screen3.jpg"),
-                  _Image(image: "assets/images/screenshots/screen2.png"),
-                ],
+            Container(
+              height: 500,
+              width: 1000,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  //mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _Image(image: "assets/images/screenshots/screen1.jpg"),
+                    _Image(image: "assets/images/screenshots/screen2.jpg"),
+                    _Image(image: "assets/images/screenshots/screen3.jpg"),
+                    _Image(image: "assets/images/screenshots/screen4.jpg"),
+                    _Image(image: "assets/images/screenshots/screen5.jpg"),
+                    _Image(image: "assets/images/screenshots/screen6.jpg"),
+                    //_Image(image: "assets/images/screenshots/screen7.jpg"),
+                    //_Image(image: "assets/images/screenshots/screen8.png"),
+                  ],
+                ),
               ),
             )
           ],

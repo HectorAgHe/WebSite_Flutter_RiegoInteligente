@@ -1,5 +1,10 @@
 {
   "projects": {
-    "default": "riego-inteligente-web"
-  }
+    "default": "riegointeligente-84244",
+    "y": "riegointeligente-84244",
+    "RiegoInteligente": "riegointeligente-84244",
+    "Riego": "riegointeligente-84244"
+  },
+  "targets": {},
+  "etags": {}
 }
